@@ -1,11 +1,11 @@
-name: Backend CD
+name: Backend Continuous Deployment
 
 on:
   push:
     branches: [main]
     paths:
       - "starter/backend/**"
-      - ".github/workflows/backend-cd.yml"
+      - ".github/workflows/backend-cd.yaml"
   workflow_dispatch:
 
 permissions:
@@ -75,7 +75,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-      - uses: aws-actions/amazon-ecr-login@v2
+      - uses: amazon-ecr-login@v2
       - uses: azure/setup-kubectl@v4
       - run: aws eks update-kubeconfig --name "$EKS_CLUSTER_NAME" --region "$AWS_REGION"
       - run: >-
