@@ -67,7 +67,7 @@ jobs:
         with:
           context: starter/frontend
           push: true
-          build-args: REACT_APP_MOVIE_API_URL=${{ vars.BACKEND_API_URL }}
+          build-args: REACT_APP_MOVIE_API_URL=${{ secrets.BACKEND_API_URL }}
           tags: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
 
   deploy:
