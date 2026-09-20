@@ -9,6 +9,14 @@ The team's project is comprised of 2 applications.
 
 You'll find 2 folders, one named `frontend` and one named `backend`, where each application's source code is maintained. Your job is to use the team's [existing documentation](#frontend-development-notes) and create CI/CD pipelines to meet the teams' needs.
 
+## Student Note
+
+GitHub repository: https://github.com/methukuabhinav-dotcom/Movie-Picture-Pipeline.git
+
+Frontend application: http://aa7d6cc601db049a8b5d8a44a33aa2fe-1911139918.us-east-1.elb.amazonaws.com
+
+Backend API: http://ac704705f956e47348119766dabad7cd-683638389.us-east-1.elb.amazonaws.com/movies
+
 ## Deliverables
 
 ### Frontend
